@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.col_staff {
+    width: 33%;
+}
+
+.staff_img {
+    width: 80%;
+}
+
+@media (max-width: 750px) {
+    .col_staff {
+        flex: 100%;
+    }
+    .col_staff b {
+        margin-bottom: 20px;
+    }
+}
