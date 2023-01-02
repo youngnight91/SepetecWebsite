@@ -18,7 +18,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Sepetec-Home</title>
+    <title>Pocketlocher</title>
 </head>
 
 <body>
@@ -51,7 +51,9 @@
                         </div>
 
 
-                        <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3 text-black"></span></a></div>
+                        <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#"
+                                class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                                    class="icon-menu h3 text-black"></span></a></div>
                     </div>
                     <div class="col-lg-4">
                         <nav class="site-navigation text-left mr-auto " role="navigation">
@@ -62,11 +64,11 @@
                             </ul>
                         </nav>
                     </div>
-
-
                 </div>
             </div>
-            <b><hr></b>
+            <b>
+                <hr>
+            </b>
         </header>
     </div>
     <br>
@@ -78,39 +80,28 @@
     <br>
     <br>
     <br>
-    <h1 class="text-center">Sepetec</h1>
-    <h3 class="text-center">Junior Company der HTL-Anichstraße</h3>
     <br>
     <br>
     <br>
-    <div class="container">
-        <b><h3 class="text-left">Produkte</h3></b>
-        <b><hr></b>
-        <div class="row text-center">
-            <div class="col">
-                <a href="products.html" class="nav-link text-dark">
-                    <img src="staff_images/Egger_Daniel.jpg" class="mx-auto d-block" width=80%><br>
-                    <b>Zum Pocketlocher</b>
-                </a>
-            </div>
-            <div class="col">
-                <a href="products.html" class="nav-link text-dark">
-                    <img src="staff_images/Egger_Daniel.jpg" class="mx-auto d-block" width=80%><br>
-                    <b>Zu AirStat</b>
-                </a>
-            </div>
+
+
+
+    <?php
+    if (isset($_POST["submit"])) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $amount = $_POST["amount"];
+        $result = "Name: " . $name . "<br>" . "Email: " . $email . "<br>" . "Amount: " . $amount;
+    }
+    ?>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <?php echo $result; ?>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <b><hr></b>
-    <br>
-    <br>
-    <p class="text-center">©Sepetec</p>
 
-    <br>
-    <br>
+
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
