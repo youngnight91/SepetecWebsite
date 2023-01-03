@@ -189,7 +189,7 @@
         </header>
     </div>
 
-    <!-- Abstand weil Steffs Navbar durchsichtig ist -->
+    <!-- Abstand weil Navbar durchsichtig ist -->
     <br>
     <br>
     <br>
@@ -238,41 +238,43 @@
                 </div>
             </div>
 
-        <form method="POST" action="success.php">
-            <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog"
-                aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-center">
-                            <h4 class="modal-title w-100 font-weight-bold">Order</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Recipient</label>
-                                <input type="text" class="form-control" name = "name" id="recipient-name">
+            <form method="POST" action="success.php">
+                <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog"
+                    aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h4 class="modal-title w-100 font-weight-bold">Order</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <div class="mb-3">
-                                <label for="recipient-email" class="col-form-label">Email</label>
-                                <input type="email" class="form-control" name = "email" id="recipient-email">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Recipient</label>
+                                    <input type="text" class="form-control" name="name" id="recipient-name"
+                                        onkeydown="return /[a-z, ]/i.test(event.key)" required>
+                                        <!-- Validation: only string + space input -->
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-email" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="recipient-email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-number" class="col-form-label">Amount</label>
+                                    <input type="number" min="0" max="100" class="form-control" name="amount"
+                                        id="recipient-number" required>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="recipient-number" class="col-form-label">Amount</label>
-                                <input type="number" min="0" max="100" class="form-control" name = "amount" id="recipient-number">
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button class="btn btn-indigo" name="submit">Send</button>
                             </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-indigo" name="submit">Send</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
 
             <script>
-
                 /// 
                 //Slider JS
                 ///
